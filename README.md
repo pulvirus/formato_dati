@@ -1,15 +1,74 @@
+# Formato dei dati meteorologici
+
+I dati debbono essere in formato **long**: 
+- sotto il campo _station_code_ e _station_eu_code_ si susseguono i codici delle stazioni di monitoraggio
+- sotto il campo _date_ si susseguono le date dei singoli giorni relativi al periodo dell'analisi dei dati
+
+I file di output debbono essere in formato testo (estensione `.csv`) utilizzando la virgola (,) come separatore di campo.
+
+I dati della singola stazione sono identificati dal campo:
+- station_code
+- station_eu_code
+- date
+- x (longitudine)
+- y (latitudine)
+
+Il campo date deve essere nel formato: ANNO-MESE-GIORNO
+- anno: 4 cifre
+- mese: due cifre (0 per il padding)
+- giorno: due cifre (0 per il padding)
+
+**I dati devono essere riportati (a meno di eccezioni) con una cifra decimale** ma i campi x e y (lon e lat) debbono avere due cifre decimali 
+(se in formato geografico, epsg: 4326).
+
+
+## Nomi dei campi
+
+Per facilitare la lettura dei dati su R, le intestazioni dei file dati `.csv` devono rispettare le seguenti regole:
+- NON devono contenere spazi
+- NON devono iniziare con una cifra (0-9( 
+- devono contenere SOLO lettere (A-Z) e cifre (0-9)
+- devono essere nomi brevi di chiaro significato
+
+Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili climatiche:
+
+| Nome esteso variabile | codice per intestazione file `.csv` | Unità di misura |
+| ---| --- | --- |
+| Surface pressure | sp | hPa |
+| Average temperate (2m) | t2m | °C |
+| Maximum temperature (2m) | tmax2m | °C |
+| Minimum temperature (2m) | tmin2m |  °C |
+| Planet Boundary Layer ore 00 | pbl00 | km |
+| Planet Boundary Layer ore 12 | pbl12 | km |
+| Total precipitation | tp | mm |
+| Previous day total precipitation | ptp | mm |
+| Wind speed | wspeed | m |
+| Wind direction | wdir | gradi |
+| Wind U component (10 meters) | u10m | --- |
+| Wind V component (10 meters) | v10m | --- |
+| Relative Humidity | rh | % |
+| Altre ? | ?? | ?? |
+
+## File variabili standardizzate
+
+Creare variabili standardizzate o ogni gruppo fa da se?
+
+## Esempio di file dati prodototto dagli archivi netCDF
+
+L'ordine delle colonne all'interno del file **NON** è importante.
+
 |station_code|station_eu_code|date|t2m|tp|altre variabili|
 |---|---|---|---|---|---|
-|603001|IT0966A|2013-01-01|49.71873|---|---|
-|603001|IT0966A|2013-01-02|25.55212|---|---|
+|603001|IT0966A|2013-01-01|49.7|---|---|
+|603001|IT0966A|2013-01-02|25.5|---|---|
 |603001|IT0966A|2013-01-03|NA|---|---|
-|603001|IT0966A|2013-01-04|45.07936|---|---|
-|603001|IT0966A|2013-01-05|46.98497|---|---|
-|603001|IT0966A|2013-01-06|64.07814|---|---|
-|603001|IT0966A|2013-01-07|51.62287|---|---|
-|603001|IT0966A|2013-01-08|46.64223|---|---|
-|603001|IT0966A|2013-01-09|48.8916|---|---|
-|603001|IT0966A|2013-01-10|61.53846|---|---|
+|603001|IT0966A|2013-01-04|45.0|---|---|
+|603001|IT0966A|2013-01-05|46.9|---|---|
+|603001|IT0966A|2013-01-06|64.0|---|---|
+|603001|IT0966A|2013-01-07|51.6|---|---|
+|603001|IT0966A|2013-01-08|46.6|---|---|
+|603001|IT0966A|2013-01-09|48.8|---|---|
+|603001|IT0966A|2013-01-10|61.5|---|---|
 |---|---|---|---|---|---|
 |603002|IT0967A|2013-01-08|46.64223|---|---|
 |603002|IT0967A|2013-01-09|48.8916|---|---|
