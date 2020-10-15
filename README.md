@@ -17,6 +17,9 @@ Il campo date deve essere nel formato: ANNO-MESE-GIORNO
 
 **I dati devono essere riportati (a meno di eccezioni) con una cifra decimale**.
 
+## Dati mancanti
+
+I dati mancanti debbono essere identificati dalla stringa NA.
 
 ## Nomi dei campi
 
