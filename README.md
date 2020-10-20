@@ -46,7 +46,7 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | Wind U component (10 meters) | u10m | numero | media |
 | Wind V component (10 meters) | v10m | numero | media |
 | Relative Humidity | rh | % | media |
-| Wind gust | wgust | m/s | Valore massimo giornaliero  | media |
+| Wind gust | wgust | m/s | **massimo giornaliero**  | media |
 | Net irradiance | nirradiance | W/m^2 | media |
 | Altre ? | ?? | ?? | ?? |
 
