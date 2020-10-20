@@ -31,22 +31,26 @@ Per facilitare la lettura dei dati su R, le intestazioni dei file dati `.csv` de
 
 Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili climatiche:
 
-| Nome esteso variabile | codice per intestazione file `.csv` | Unità di misura |
-| ---| --- | --- |
-| Surface pressure | sp | hPa |
-| Average temperate (2m) | t2m | °C |
-| Maximum temperature (2m) | tmax2m | °C |
-| Minimum temperature (2m) | tmin2m |  °C |
-| Planet Boundary Layer ore 00 | pbl00 | km |
-| Planet Boundary Layer ore 12 | pbl12 | km |
-| Total precipitation | tp | mm |
-| Previous day total precipitation | ptp | mm |
-| Wind speed | wspeed | m |
-| Wind direction | wdir | gradi |
-| Wind U component (10 meters) | u10m | --- |
-| Wind V component (10 meters) | v10m | --- |
-| Relative Humidity | rh | % |
-| Altre ? | ?? | ?? |
+| Nome esteso variabile | codice per intestazione file `.csv` | Unità di misura | Aggregazione giornaliera |
+| ---| --- | --- | --- |
+| Surface pressure | sp | hPa | media |
+| Average temperate (2m) | t2m | °C | media |
+| Maximum temperature (2m) | tmax2m | °C | media |
+| Minimum temperature (2m) | tmin2m |  °C | media |
+| Planet Boundary Layer ore 00 | pbl00 | km | media |
+| Planet Boundary Layer ore 12 | pbl12 | km | media |
+| Total precipitation | tp | mm | somma |
+| Previous day total precipitation | ptp | mm | somma |
+| Wind speed | wspeed | m/s | media |
+| Wind direction | wdir | gradi | **moda** |
+| Wind U component (10 meters) | u10m | numero | media |
+| Wind V component (10 meters) | v10m | numero | media |
+| Relative Humidity | rh | % | media |
+| Wind gust | wgust | m/s | Valore massimo giornaliero  | media |
+| Net irradiance | W/m^2 | media |
+| Altre ? | ?? | ?? | ?? |
+
+** NOTA: la tabella sopra ancora non è definitiva **
 
 ## Esempio di file dati prodototto dagli archivi netCDF
 
