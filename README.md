@@ -50,7 +50,7 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | Net irradiance | nirradiance | W/m^2 | media |
 | Altre ? | ?? | ?? | ?? |
 
-**NOTA: la tabella sopra ancora non è definitiva **
+**NOTA: la tabella sopra ancora non è definitiva**
 
 ## Esempio di file dati prodototto dagli archivi netCDF
 
