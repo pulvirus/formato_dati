@@ -37,8 +37,8 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | Average temperate (2m) | t2m | °C | media |
 | Maximum temperature (2m) | tmax2m | °C | media |
 | Minimum temperature (2m) | tmin2m |  °C | media |
-| Planet Boundary Layer ore 00 | pbl00 | km | media |
-| Planet Boundary Layer ore 12 | pbl12 | km | media |
+| Planet Boundary Layer ore 00 | pbl00 | km | media o **valore istantaneo** |
+| Planet Boundary Layer ore 12 | pbl12 | km | media **valore istantaneo** |
 | Total precipitation | tp | mm | somma |
 | Previous day total precipitation | ptp | mm | somma |
 | Wind speed | wspeed | m/s | media |
