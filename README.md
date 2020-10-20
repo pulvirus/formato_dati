@@ -1,6 +1,6 @@
 # Formato dei dati meteorologici
 
-I dati debbono essere in formato **long**: 
+I dati debbono essere in formato **long** rispetto al codice stazione e alla data: 
 - sotto il campo _station_code_ e _station_eu_code_ si susseguono i codici delle stazioni di monitoraggio
 - sotto il campo _date_ si susseguono le date dei singoli giorni relativi al periodo dell'analisi dei dati
 
