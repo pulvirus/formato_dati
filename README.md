@@ -35,16 +35,16 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | ---| --- | --- | --- |
 | Surface pressure | sp | hPa | media |
 | Average temperate (2m) | t2m | °C | media |
-| Maximum temperature (2m) | tmax2m | °C | media |
-| Minimum temperature (2m) | tmin2m |  °C | media |
+| Maximum temperature (2m) | tmax2m | °C | **massimo giornaliero** |
+| Minimum temperature (2m) | tmin2m |  °C | **minimo giornaliero** |
 | Planet Boundary Layer ore 00 | pbl00 | km | media o **valore istantaneo** |
 | Planet Boundary Layer ore 12 | pbl12 | km | media **valore istantaneo** |
 | Total precipitation | tp | mm | somma |
 | Previous day total precipitation | ptp | mm | somma |
 | Wind speed | wspeed | m/s | media |
 | Wind direction | wdir | gradi | **moda** |
-| Wind U component (10 meters) | u10m | numero | media |
-| Wind V component (10 meters) | v10m | numero | media |
+| Wind U component (10 meters) | u10m | m/s  | media |
+| Wind V component (10 meters) | v10m | m/s  | media |
 | Relative Humidity | rh | % | media |
 | Wind gust | wgust | m/s | **massimo giornaliero**  | media |
 | Net irradiance | nirradiance | W/m^2 | media |
@@ -52,6 +52,19 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 
 **NOTA: la tabella sopra ancora non è definitiva**
 
+## Potenziali variabili meteorologiche aggiuntive emerse dall'analisi della letteratura scientifica:
+
+| Nome esteso variabile | codice per intestazione file `.csv` | Unità di misura | Aggregazione giornaliera |
+| ---| --- | --- | --- |
+| Front | frontcat | numero o testo | categoriale |
+| Number of days since front | dfront | numero | somma di giorni |
+| Synoptic group | syngr | numero o testo | categoriale |
+| Cloud cover | clcover |  okta | media |
+| Cloud cover maxmin| clcovermaxmin |  okta | differenza massimo-minimo giornaliero (se disponibile) |
+| Back trajectory | backtraj | numero o testo | categoriale |
+| Altre da ERA5? | ?? | ?? | ?? |
+
+**NOTA: la tabella sopra ancora non è definitiva**
 ## Esempio di file dati prodototto dagli archivi netCDF
 
 L'ordine delle colonne all'interno del file **NON** è importante.
