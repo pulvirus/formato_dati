@@ -58,7 +58,7 @@ Per i nomi delle variabili climatiche principali utilizzare la seguente tabella 
 | Net irradiance | nirradiance | W/m^2 | media |
 
 
-La tabella qui sotto riportata si riferisce ad altre variabili che potrebbero essere d'interesse per il progetto e che meritano una discussione se utilizzarle o meno:
+La tabella qui sotto riportata si riferisce ad altre variabili che potrebbero essere d'interesse per il progetto e che meritano comunque un approfondimento:
 
 
 ## Potenziali variabili meteorologiche aggiuntive emerse dall'analisi della letteratura scientifica:
