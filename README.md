@@ -32,7 +32,7 @@ Separatore dicemale: "."
 Per facilitare la lettura dei dati su R, le intestazioni dei file dati `.csv` devono rispettare le seguenti regole:
 - NON devono contenere spazi
 - NON devono iniziare con una cifra (0-9) 
-- devono contenere SOLO lettere (A-Z) e cifre (0-9)
+- NON devono contenere caratteri spaciali, SOLO lettere (A-Z) e cifre (0-9)
 - devono essere nomi brevi di chiaro significato
 
 Per i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati:
