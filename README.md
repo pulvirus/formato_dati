@@ -1,36 +1,43 @@
 # Formato dei dati meteorologici
 
 I dati debbono essere in formato **long** rispetto al codice stazione e alla data: 
-- sotto il campo _station_code_ e _station_eu_code_ si susseguono i codici delle stazioni di monitoraggio
+- sotto il campo _station_code_ e/o _station_eu_code_ si susseguono i codici delle stazioni di monitoraggio
 - sotto il campo _date_ si susseguono le date dei singoli giorni relativi al periodo dell'analisi dei dati
 
 I file di output debbono essere in formato testo (estensione `.csv`) utilizzando la virgola (,) come separatore di campo.
 
 I dati di ciascuna stazione di monitoraggio sono identificati dal campo:
-- station_eu_code
+- station_eu_code (Raffaele ha utilizzato questo come codice identificativo delle stazioni per gli inquinanti)
 - date
 
 Il campo date deve essere nel formato: ANNO-MESE-GIORNO
 - anno: 4 cifre
-- mese: due cifre (0 per il padding)
-- giorno: due cifre (0 per il padding)
+- mese: due cifre (0 per il padding nel caso dei mesi da 1 a 9)
+- giorno: due cifre (0 per il padding nel caso dei giorni da 1 a 9)
 
-**I dati devono essere riportati (a meno di eccezioni) con una cifra decimale**.
+Coordinate dei punti stazione:
+- epsg 32632 (UTM32) in kilometri 
+
+
+I dati devono essere riportati (a meno di eccezioni) con una cifra decimale. 
+Separatore dicemale: "."
 
 ## Dati mancanti
 
-- I dati mancanti debbono essere identificati dalla stringa NA.
-- Il calendario deve essere completo anche laddove tutte le variabili siano mancanti.
+- I dati mancanti debbono essere identificati dalla stringa NA (no -999 o altre stringhe tipo NULL).
+- Il calendario (il campo date) deve essere completo anche laddove tutte le variabili siano mancanti (riga di NA).
 
 ## Nomi dei campi
 
 Per facilitare la lettura dei dati su R, le intestazioni dei file dati `.csv` devono rispettare le seguenti regole:
 - NON devono contenere spazi
-- NON devono iniziare con una cifra (0-9( 
+- NON devono iniziare con una cifra (0-9) 
 - devono contenere SOLO lettere (A-Z) e cifre (0-9)
 - devono essere nomi brevi di chiaro significato
 
-Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili climatiche:
+Per i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati:
+- il nome sintetico della variabile
+- l'unità di misura da utilizzare 
 
 | Nome esteso variabile | codice per intestazione file `.csv` | Unità di misura | Aggregazione giornaliera |
 | ---| --- | --- | --- |
@@ -49,9 +56,10 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | Relative Humidity | rh | % | media |
 | Wind gust | wgust | m/s | **massimo giornaliero**  | media |
 | Net irradiance | nirradiance | W/m^2 | media |
-| Altre ? | ?? | ?? | ?? |
 
-**NOTA: la tabella sopra ancora non è definitiva**
+
+La tabella qui sotto riportata si riferisce ad altre variabili che potrebbero essere d'interesse per il progetto e che meritano una discussione se utilizzarle o meno:
+
 
 ## Potenziali variabili meteorologiche aggiuntive emerse dall'analisi della letteratura scientifica:
 
@@ -66,6 +74,7 @@ Si suggerisce di utilizzare la seguente tabella per i nomi delle variabili clima
 | Altre da ERA5? | ?? | ?? | ?? |
 
 **NOTA: la tabella sopra ancora non è definitiva**
+
 ## Esempio di file dati prodototto dagli archivi netCDF
 
 L'ordine delle colonne all'interno del file **NON** è importante.
