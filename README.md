@@ -19,7 +19,8 @@ Il campo date deve essere nel formato: ANNO-MESE-GIORNO
 
 ## Dati mancanti
 
-I dati mancanti debbono essere identificati dalla stringa NA.
+- I dati mancanti debbono essere identificati dalla stringa NA.
+- Il calendario deve essere completo anche laddove tutte le variabili siano mancanti.
 
 ## Nomi dei campi
 
